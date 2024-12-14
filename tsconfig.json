@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                       // Versão do JavaScript emitido.
+    "module": "CommonJS",                  // Tipo de módulo para Node.js.
+    "outDir": "./dist",                    // Diretório de saída dos arquivos compilados.
+    "rootDir": "./src",                    // Diretório de origem dos arquivos TypeScript.
+    "strict": true,                        // Ativa todas as verificações estritas.
+    "esModuleInterop": true,               // Melhora suporte para importação de módulos CommonJS.
+    "resolveJsonModule": true,             // Permite importar arquivos JSON.
+    "moduleResolution": "node",            // Resolução de módulos estilo Node.js.
+    "sourceMap": true,                     // Gera source maps para depuração.
+    "forceConsistentCasingInFileNames": true, // Garante consistência na nomenclatura de arquivos.
+    "baseUrl": "./",                       // Define a base para os paths.
+    "paths": {                             // Alias para facilitar importações.
+      "@src/*": ["src/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "noUnusedLocals": true,                // Erro para variáveis não usadas.
+    "noUnusedParameters": true,            // Erro para parâmetros não utilizados.
+    "noImplicitReturns": true,             // Garante retornos explícitos em funções.
+    "noFallthroughCasesInSwitch": true     // Evita casos sem break em switch.
+  },
+  "include": ["src/**/*"],                 // Inclui todos os arquivos na pasta src.
+  "exclude": ["node_modules", "dist"]      // Exclui node_modules e dist da compilação.
+}
